@@ -1,0 +1,9 @@
+docker run --rm --interactive --tty -p 80:80 -p 443:443 ft_server
+
+apt-get install net-tools
+netstat -tulpn
+
+/usr/sbin/php-fpm7.3 -y /etc/php/7.3/fpm/php-fpm.conf
+
+/etc/nginx/snippets/fastcgi-php.conf
+/etc/php/7.3/fpm/php-fpm.conf
