@@ -7,3 +7,5 @@ netstat -tulpn
 
 /etc/nginx/snippets/fastcgi-php.conf
 /etc/php/7.3/fpm/php-fpm.conf
+
+select host, user, password from mysql.user;
