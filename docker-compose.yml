@@ -16,18 +16,6 @@ services:
     depends_on:
       - mysql
     restart: always
-  phpmyadmin:
-    build: ./srcs/phpmyadmin
-    # ports:
-    #   - 9000:9000
-    volumes:
-    #   - wordpress:/var/www/html
-      - mysql_data:/var/lib/mysql
-    depends_on:
-      - mysql
-    links:
-      - wordpress
-    restart: always
   nginx:
     build: ./srcs/nginx
     ports:
