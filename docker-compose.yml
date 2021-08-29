@@ -1,13 +1,20 @@
 services:
   mysql:
     build: ./srcs/mysql
+    env_file: 
+      - ./srcs/.env
     ports:
       - 3306:3306
     volumes:
       - mysql_data:/var/lib/mysql
     restart: always
+    networks:
+      - net
+
   wordpress:
     build: ./srcs/wordpress
+    env_file: 
+      - ./srcs/.env
     ports:
       - 9000:9000
     volumes:
@@ -16,17 +23,29 @@ services:
     depends_on:
       - mysql
     restart: always
+    networks:
+      - net
+
   nginx:
     build: ./srcs/nginx
+    env_file: 
+      - ./srcs/.env
     ports:
       - 80:80
       - 443:443
-    links:
+    depends_on:
       - wordpress
     volumes:
       - wordpress:/var/www/html
     restart: always
+    networks:
+      - net
+
 volumes:
   wordpress:
   mysql_data:
+
+networks:
+  net:
+    driver: bridge
       
