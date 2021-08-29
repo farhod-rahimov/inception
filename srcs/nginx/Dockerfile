@@ -6,7 +6,7 @@
 #    By: farhod <farhod@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/13 18:08:16 by btammara          #+#    #+#              #
-#    Updated: 2021/08/22 08:38:25 by farhod           ###   ########.fr        #
+#    Updated: 2021/08/29 20:19:24 by farhod           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,8 @@ FROM debian:buster
 RUN apt-get update
 RUN apt-get upgrade -y
 
-# INSTALL WGET, VIM, NET-TOOLS
-RUN apt-get -y install wget && apt-get -y install vim && apt-get install net-tools
+# INSTALL WGET, VIM AND TOP
+RUN apt-get -y install wget && apt-get -y install vim && apt-get install -y procps
 
 # INSTALL NGINX
 RUN apt-get -y install nginx

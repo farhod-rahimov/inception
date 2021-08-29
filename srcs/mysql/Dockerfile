@@ -6,7 +6,7 @@
 #    By: farhod <farhod@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/13 18:08:16 by btammara          #+#    #+#              #
-#    Updated: 2021/08/22 15:34:18 by farhod           ###   ########.fr        #
+#    Updated: 2021/08/29 20:19:03 by farhod           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,8 @@ FROM debian:buster
 RUN apt-get update
 RUN apt-get upgrade -y
 
-# INSTALL WGET AND VIM
-RUN apt-get -y install wget && apt-get -y install vim
+# INSTALL WGET, VIM AND TOP
+RUN apt-get -y install wget && apt-get -y install vim && apt-get install -y procps
 
 # INSTALL MARIADB
 RUN apt-get -y install mariadb-server && apt-get install net-tools
