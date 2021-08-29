@@ -6,13 +6,10 @@
 #    By: farhod <farhod@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/13 18:12:35 by btammara          #+#    #+#              #
-#    Updated: 2021/08/22 09:12:30 by farhod           ###   ########.fr        #
+#    Updated: 2021/08/29 17:58:19 by farhod           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #!/bin/bash
 
-service nginx start
-
-tail -f
-bash
+nginx -g 'daemon off;'
