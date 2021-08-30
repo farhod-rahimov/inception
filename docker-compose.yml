@@ -1,6 +1,8 @@
 services:
   mysql:
     build: ./srcs/mysql
+    image: mysql
+    container_name: mysql
     env_file: 
       - ./srcs/.env
     ports:
@@ -13,6 +15,8 @@ services:
 
   wordpress:
     build: ./srcs/wordpress
+    image: wordpress
+    container_name: wordpress
     env_file: 
       - ./srcs/.env
     ports:
@@ -28,6 +32,8 @@ services:
 
   nginx:
     build: ./srcs/nginx
+    image: nginx
+    container_name: nginx
     env_file: 
       - ./srcs/.env
     ports:
