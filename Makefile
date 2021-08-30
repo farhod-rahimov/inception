@@ -1,4 +1,4 @@
-all:
+all: 	
 		docker-compose build
 		docker-compose up
 
@@ -9,3 +9,5 @@ clean:
 		docker volume rm $$(docker volume ls -q)
 		docker volume rm $$(docker volume ls -q)
 		docker network rm $$(docker network ls -q)
+
+.PHONY: all clean

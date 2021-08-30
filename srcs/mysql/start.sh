@@ -3,14 +3,16 @@
 #                                                         :::      ::::::::    #
 #    start.sh                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: farhod <farhod@student.42.fr>              +#+  +:+       +#+         #
+#    By: btammara <btammara@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/13 18:12:35 by btammara          #+#    #+#              #
-#    Updated: 2021/08/29 17:59:29 by farhod           ###   ########.fr        #
+#    Updated: 2021/08/30 13:24:38 by btammara         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #!/bin/bash
+
+mysql_install_db
 
 service mysql start
 

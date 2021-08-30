@@ -49,7 +49,17 @@ services:
 
 volumes:
   wordpress:
+    driver: local
+    driver_opts:
+      type: none
+      device: /Users/btammara/volumes/wordpress
+      o: bind
   mysql_data:
+    driver: local
+    driver_opts:
+      type: none
+      device: /Users/btammara/volumes/mysql_data
+      o: bind
 
 networks:
   net:
